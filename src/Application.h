@@ -10,15 +10,22 @@
 #include "Encoder.h"
 #include "Decoder.h"
 
-class Application {
-    enum { ENCODE, DECODE, IDLE } state;
-    Encoder* encoder;
-    Decoder* decoder;
-    char* fn_in;
-    char* fn_out;
+class Application
+{
+    enum
+    {
+        ENCODE,
+        DECODE,
+        IDLE
+    } state;
+    Encoder *encoder;
+    Decoder *decoder;
+    char *fn_in;
+    char *fn_out;
     float bit_rate;
+
 public:
-    Application(int argc, char** argv);
+    Application(int argc, char **argv);
     ~Application();
     void run();
 };
